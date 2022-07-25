@@ -1,0 +1,36 @@
+{% extends 'admin/base.html'%}
+
+{% block home %} active  {% endblock %}
+
+{% block title %} Admin || Home || A Watcher  {% endblock %}
+
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{%static 'css/admin/index.css'%}">
+{% endblock %}
+
+
+{% block content %}
+
+<main class="bg-dark">
+
+    <div class="container-fluid text-white main-container">
+        <h1> Welcome to Admin Panel</h1>
+        <hr class="w-50" style="margin: 2vh auto;">
+        <a href="/admin/additem"><button type="button" class="btn btn-primary mb-3">Add Item</button></a>
+        <a href="/admin/order"><button type="button" class="btn btn-primary mb-3">See Order</button></a>
+        <a href="#"><button type="button" class="btn btn-primary mb-3">Item List</button></a>
+
+        <hr class="w-50" style="margin: 2vh auto;">
+
+        <a href="/admin/logout"><button type="button" class="btn btn-danger">Log Out</button></a>
+
+
+
+
+    </div>
+
+</main>
+    
+{% endblock %}

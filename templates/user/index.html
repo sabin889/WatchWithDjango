@@ -1,0 +1,141 @@
+{% extends 'base.html'%}
+
+{% block title %} A Watcher  || Home {% endblock %} 
+
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/user/index.css' %}"> {% endblock %}
+
+{% block content %}
+<main>
+    <div class="container-fluid main-container"></div>
+
+    <div class="second-container container">
+      <div class="latest-text-section row">
+        <div class="col-12">
+          <div class="section-heading">
+            <h1>Latest Product</h1>
+            <a href="/shop" class="fs-5"
+              >view all products <b>></b></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="latest-product-section row">
+        <div class="product-details col-md-4">
+          <div>
+            <div class="image-section">
+              <a href="/shop"
+                ><img
+                  src="{% static 'image/index/alex-azabache-fgCnYUwK_E8-unsplash.jpg'%}"
+                  alt=""
+              /></a>
+            </div>
+            <div class="image-info">
+              <h2>The Watcher Watch</h2>
+              <p><b>$ 45,500</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="product-details col-md-4">
+          <div>
+            <div class="image-section">
+              <a href="/shop"
+                ><img
+                  src="{% static 'image/index/lightscape-YBR08SwBp24-unsplash.jpg'%} "
+                  alt=""
+              /></a>
+            </div>
+            <div class="image-info">
+              <h2>The Watcher Watch</h2>
+              <p><b>$ 45,500</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="product-details col-md-4">
+          <div>
+            <div class="image-section">
+              <a href="/shop"
+                ><img
+                  src="{% static 'image/index/mambawatches-pw1hPEXl09E-unsplash.jpg'%} "
+                  alt=""
+              /></a>
+            </div>
+            <div class="image-info">
+              <h2>The Watcher Watch</h2>
+              <p><b>$ 45,500</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="product-details col-md-4">
+          <div>
+            <div class="image-section">
+              <a href="/shop"
+                ><img
+                  src=" {% static 'image/index/nevergg-cvqtViPmlDE-unsplash.jpg'%} "
+                  alt=""
+              /></a>
+            </div>
+            <div class="image-info">
+              <h2>The Watcher Watch</h2>
+              <p><b>$ 45,500</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="product-details col-md-4">
+          <div>
+            <div class="image-section">
+              <a href="/shop"
+                ><img
+                  src="{% static 'image/index/rendy-novantino-FYNd0jgG5zw-unsplash.jpg'%} "
+                  alt=""
+              /></a>
+            </div>
+            <div class="image-info">
+              <h2>The Watcher Watch</h2>
+              <p><b>$ 45,500</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="product-details col-md-4">
+          <div>
+            <div class="image-section">
+              <a href="/shop"
+                ><img
+                  src="{% static 'image/index/slashio-photography-fy-JGSH-3N0-unsplash.jpg'%} "
+                  alt=""
+              /></a>
+            </div>
+            <div class="image-info">
+              <h2>The Watcher Watch</h2>
+              <p><b>$ 45,500</b></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="thrid-container container-fluid">
+      <div class="about-info row align-items-center">
+        <div
+          class="about-info-content offset-md-6 col-md-5 col-sm-7 offset-sm-4"
+        >
+          <h1>ABOUT OUR WATCH</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+            reprehenderit repudiandae atque. Iure obcaecati labore, dolores in
+            nobis enim eius architecto iste suscipit repellendus hic qui? Vero
+            labore blanditiis quod!
+          </p>
+          <a href="/about"><button type="button" class="btn btn-outline-light" >
+            Read More
+          </button></a>
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}
+

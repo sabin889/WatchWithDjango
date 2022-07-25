@@ -1,0 +1,18 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c757d;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+}   
+
+.main-container>div{
+    background-color: #343a40;
+    padding: 5vh 20px;
+    border-radius: 15px;
+
+    box-shadow: 1px 1px 5px 0 #455c71;
+}
+
+

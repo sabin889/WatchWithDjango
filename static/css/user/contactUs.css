@@ -1,0 +1,16 @@
+ /* Main  */
+ .first-container{
+    background-image: url(../../image/contact/businessman-3897245.jpg);
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.second-container{
+    margin: 10vh 0;
+}
+
+.our-location-map iframe{
+    width: 95%;
+}

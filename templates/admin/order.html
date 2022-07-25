@@ -1,0 +1,78 @@
+{% extends 'admin/base.html'%}
+{% block order %} active  {% endblock %}
+
+
+{% block title %} A Watcher  || Order {% endblock %} 
+
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/admin/cart.css' %}">
+
+  <style>
+    .main-container{
+      min-height: 50vh;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+<main class="bg-dark">
+
+  <div class="container">
+
+  </div>
+
+    <div class="container text-white main-container">
+        
+        <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th scope="col"> SN </th>
+                <th scope="col">Prodcut Image</th>
+                <th scope="col">Prodcut Name</th>
+                <th scope="col">Customer Info</th>
+                <th scope="col">Options</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for orders in order %}
+
+               
+
+              <tr>
+                <th scope="row">1</th>
+                <td ><img src="/{{orders.product_id.product_image}}" alt="" srcset="" width="300" height="200"></td>
+                <td>{{orders.product_id.product_price}}</td>
+                <td>
+                  <ul>
+                    <li style="list-style: none;">Name: {{orders.user_id.first_name}}</li>
+                    <li style="list-style: none;">Phone: {{orders.user_id.email}}</li>
+
+                  </ul>
+                </td>
+                <td>
+                    
+                    <a href="/item/buy_delete/{{orders.product_id.id}}/{{orders.user_id.id}}"><button type="button" class="btn btn-danger">Delete</button></a>
+
+                </td>
+              </tr>
+             
+
+            
+
+              {% endfor %}
+              
+            </tbody>
+          </table>
+
+
+
+    </div>
+
+</main>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/user/shopType.js' %}"></script>
+
+{% endblock %}

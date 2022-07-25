@@ -1,0 +1,105 @@
+{% extends 'admin/base.html'%}
+{% block item %} active  {% endblock %}
+
+{% block title %} Admin || Add Item || A Watcher  {% endblock %}
+
+{% load static%}
+
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/admin/item.css'%}"> 
+{%  endblock %}
+
+{% block content %}
+
+<main>
+    <div class="second-container bg-dark">
+      <div class="container">
+        <div class="row mb-5 our-shop">
+          <div class="col-12 mb-3">
+            <ul class="d-flex justify-content-around ">
+              <li class=""><a class="shop-all text-white">All Product</a> </li>
+              <li class=""><a class="shop-new text-white">Newest</a> </li>
+              <li class=""><a class="shop-old text-white">Oldest</a> </li>
+            </ul>
+
+            <hr />
+          </div>
+        </div>
+        <div class="row mb-5 shop-all shop-list-all">
+            {%for products in product%}
+
+            <div class="col-lg-4 col-md-6 mb-5">
+                <div>
+                    <div class="watch">
+                        <img src="/{{products.product_image}}" alt="">
+                        
+                    </div>
+                    <div class="info text-center">
+                      <h2 class="text-white">{{products.product_name}}</h2>
+                      <p><b>RS {{products.product_price}}</b></p>
+                    </div>
+                    <div class="watch-buttons ">
+                        <a href="/item/edit/{{products.id}}"><button type="button" class="btn btn-primary">Edit</button></a>
+                        <a href="/item/delete/{{products.id}}"><button type="button" class="btn btn-danger">Delete</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+        </div>
+
+        <div class="row mb-5 shop-new shop-list-new">
+          {%for products in product%}
+
+          <div class="col-lg-4 col-md-6 mb-5">
+              <div>
+                  <div class="watch">
+                      <img src="/{{products.product_image}}" alt="">
+                      
+                  </div>
+                  <div class="info text-center">
+                    <h2 class="text-white">{{products.product_name}}</h2>
+                    <p><b>RS {{products.product_price}}</b></p>
+                  </div>
+                  <div class="watch-buttons ">
+                      <a href="/item/edit/{{products.id}}"><button type="button" class="btn btn-primary">Edit</button></a>
+                      <a href="/item/delete/{{products.id}}"><button type="button" class="btn btn-danger">Delete</button></a>
+                  </div>
+              </div>
+          </div>
+          
+          {% endfor %}
+      </div>
+
+      <div class="row mb-5 shop-old shop-list-old">
+        {%for products in product|dictsortreversed:"id"%}
+
+        <div class="col-lg-4 col-md-6 mb-5">
+            <div>
+                <div class="watch">
+                    <img src="/{{products.product_image}}" alt="">
+                    
+                </div>
+                <div class="info text-center">
+                  <h2 class="text-white">{{products.product_name}}</h2>
+                  <p><b>RS {{products.product_price}}</b></p>
+                </div>
+                <div class="watch-buttons ">
+                    <a href="/item/edit/{{products.id}}"><button type="button" class="btn btn-primary">Edit</button></a>
+                    <a href="/item/delete/{{products.id}}"><button type="button" class="btn btn-danger">Delete</button></a>
+                </div>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+      </div>
+    </div>
+  </main>
+    
+{% endblock %}
+
+
+{% block js %}
+  <script src="{% static 'js/user/shopType.js' %}"></script>
+{%endblock%}

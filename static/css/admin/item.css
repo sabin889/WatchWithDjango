@@ -1,0 +1,54 @@
+
+.second-container{
+    padding: 20vh 0;
+    min-height: 50vh !important;
+}
+
+.our-shop li{
+    list-style: none;
+}
+
+.our-shop li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all 100ms ease-in-out;
+}
+
+.active-shop{
+    color: #f33f3f !important;
+    font-size: 1.1rem;
+}
+.our-shop li{
+    color: white;
+}
+
+.our-shop li:not(.active-shop):hover{
+    color: #f33f3f;
+    font-size: 1.1rem;
+}
+
+.watch{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.watch-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.watch img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.info p {
+    color: #f33f3f;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .shop-list-display{
+    display: none;
+ }

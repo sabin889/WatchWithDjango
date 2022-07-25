@@ -1,0 +1,43 @@
+<header>
+    <nav class="navbar navbar-expand-xl position-fixed navbar-dark bg-dark w-100">
+        <div class="container-fluid">
+          <a class="navbar-brand fs-2 fw-bold" href="/admin/home">A Watcher</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="menu-option navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {% block home %} {% endblock%} fs-5" aria-current="page" href="/admin/home"
+                      >Home</a
+                    >
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link {% block order %} {% endblock%} fs-5" aria-current="page" href="/admin/order"
+                  >See Order</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block additem %} {% endblock%} fs-5" href="/admin/additem"> Add Item</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block item %} {% endblock%} fs-5" href="/admin/item">  Item</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link {% block message %} {% endblock%}fs-5" href="/admin/message">Message</a>
+              </li>
+           
+          </div>
+        </div>
+      </nav>
+</header>

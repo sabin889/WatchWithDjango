@@ -1,0 +1,37 @@
+
+  .first-container{
+    background-image: url(../../image/about/pocket-watch-1637396.jpg);
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.second-container{
+    margin: 10vh 0;
+}
+
+.our-background-image img{
+    width: 100%;
+}
+
+.our-background-info h4{
+    color: #f33f3f;
+}
+
+.team-member{
+    width: 90%;
+}
+
+.team-image img{
+  width: 100%;
+}
+
+.team-info h6{
+    color: #f33f3f;
+}
+
+.patner-image img{
+    width: 100%;
+}
+

@@ -1,0 +1,104 @@
+{% extends 'base.html'%}
+
+{% block title %} A Watcher  || Shop {% endblock %} 
+
+{% load static %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/user/shop.css' %}"> {% endblock %}
+
+{% block content %}
+<main>
+    <div class="first-container"></div>
+    <div class="second-container">
+      <div class="container">
+        <div class="row mb-5 our-shop">
+          <div class="col-12 mb-3">
+            <ul class="d-flex justify-content-around">
+              <li class=""><a  class="shop-all">All Product</a></li>
+              <li class=""><a  class="shop-new">Newest</a></li>
+              <li class=""><a  class="shop-old">Oldest</a></li>
+            </ul>
+
+            <hr />
+          </div>
+        </div>
+
+        <div class="row mb-5 shop-list shop-list-all">
+
+            {%for products in product%}
+            <div class="col-lg-4 col-md-6">
+              <a href="/item/details/{{products.id}}">
+                <div>
+                  <div class="watch" >
+                      <img src="/{{products.product_image}}" alt="">
+                  </div>
+                  <div class="info text-center">
+                    <h2>{{products.product_name}}</h2>
+                    <p><b>$ {{products.product_price}}</b></p>
+                  </div>
+              </div>
+            </a>
+
+          </div>
+          {% endfor %}
+
+
+        </div>
+
+        <div class="row mb-5 shop-list shop-list-new">
+
+          {%for products in product|dictsort:"id"%}
+          <div class="col-lg-4 col-md-6">
+            <a href="/item/details/{{products.id}}">
+              <div>
+                <div class="watch">
+                    <img src="/{{products.product_image}}" alt="">
+                </div>
+                <div class="info text-center">
+                  <h2>{{products.product_name}}</h2>
+                  <p><b>$ {{products.product_price}}</b></p>
+                </div>
+            </div>
+          </a>
+
+        </div>
+        {% endfor %}
+
+
+      </div>
+
+      <div class="row mb-5 shop-list shop-list-old">
+
+        {%for products in product|dictsortreversed:"id"%}
+
+        
+
+        <div class="col-lg-4 col-md-6">
+          <a href="/item/details/{{products.id}}">
+            <div>
+              <div class="watch">
+                  <img src="/{{products.product_image}}" alt="">
+              </div>
+              <div class="info text-center">
+                <h2>{{products.product_name}}</h2>
+                <p><b>$ {{products.product_price}}</b></p>
+              </div>
+          </div>
+        </a>
+
+      </div>
+      {% endfor %}
+
+
+    </div>
+
+
+      </div>
+    </div>
+  </main>
+
+{% endblock %}
+
+{% block js %}
+  <script src="{% static 'js/user/shopType.js' %}"></script>
+{%endblock%}
